@@ -7,8 +7,9 @@ services:
       args:
         - DEV=true
     ports:
-      - "8000:8000"
+      - "8089:8089"
     volumes:
-      - /home/qzl/app:/app
+      - /home/qzl/GitProjects/recipe-app-api/app:/app
     command: >
-      sh -c "python manage.py runserver 0.0.0.0:8000"
+      sh -c "python manage.py runserver 0.0.0.0:8089"
+      
