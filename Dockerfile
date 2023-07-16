@@ -18,9 +18,7 @@ RUN python -m venv /py && \
         --no-create-home \
         django-user && \
     chown django-user:django-user -R /app/ && \
-    chmod +x /app
+    chmod +x /app/
 
 ENV PATH="/py/bin:$PATH"
--- RUN chown django-user:django-user -R /app/
--- RUN chmod +x /app
 USER django-user
