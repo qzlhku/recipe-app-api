@@ -12,6 +12,12 @@ RUN python -m venv /py && \
     /py/bin/pip install --upgrade pip && \
     /py/bin/pip install -r /tmp/requirements.txt -i https://mirrors.aliyun.com/pypi/simple && \
     rm -rf /tmp && \
+    adduser \
+        -u 1001 \
+        --disabled-password \
+        --no-create-home \
+        django-user && \
+    chown django-user:django-user -R /app/ && \
     chmod +x /app/
 
 ENV PATH="/py/bin:$PATH"
