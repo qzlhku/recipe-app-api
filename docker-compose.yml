@@ -9,7 +9,7 @@ services:
     ports:
       - "8089:8089"
     volumes:
-      - /home/qzl/GitProjects/recipe-app-api/app:/app
+      - ./app:/app
     command: >
       sh -c "python manage.py wait_for_db && 
              python manage.py migrate && 
